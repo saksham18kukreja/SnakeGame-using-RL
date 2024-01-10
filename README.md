@@ -24,9 +24,9 @@ Actions are represented by simple commands of Up, Down, Left and Right.
 
 ## Rewards
 Reinforcement Learning works by maximizing the reward obtained in every iteration. For this the reward received by the agent is mapped as:
-1. +10 is food
-2. -5 is obstacle
-3. $(1/\text{distance})$ otherwise where distance corresponds to the euclidean distance between the food and snake head. This step ensures possitive reward for any action leading towards the food
+1. +10 if food
+2. -5 if obstacle
+3. $(1/\text{distance})$ otherwise; where distance corresponds to the euclidean distance between the food and snake head. This step ensures possitive reward for any action leading towards the food
 
 ## Reinforcement Learning Method
 Policy gradients represent a fundamental concept in reinforcement learning, serving as a powerful technique for training agents to navigate complex environments. Unlike traditional value-based methods that estimate the optimal action values, policy gradient methods directly learn the policy—the strategy an agent employs to make decisions. The core idea is to adjust the parameters of the policy in the direction that increases the likelihood of actions leading to higher rewards. Through the iterative process of interacting with the environment, collecting trajectories, and updating the policy based on the observed rewards, policy gradient methods have proven to efficient.
