@@ -7,29 +7,31 @@ The classic game of snake is a perfect example of a MDP(Markov Decision Process)
 The RL algorithms involve defining an environment, states, actions and rewards.
 The state for our system involves a vector of size 12 which contains the state representation in the form 
 
-### Relative position of the food with respect to the snake head
+## States
+The state for our system involves a vector of size 12 which contains the state representation in the form-
+### 1. Relative position of the food with respect to the snake head
 The first 4 vectors define where the food is relative to the snake head based on the coordinates of the snake head and the food.
 The value in the first 4 indexes is '1' based on if it is up, down , left or right. '0' otherwise.
 
-### Direction of Snake Movement
+### 2. Direction of Snake Movement
 The next 4 index include the direction of movement of the snake head with respect to the game's frame, represented by '1' if true and '0' otherwise. Order of movement is Up, Down, Left and Right
 
-### Obstacle Information
+### 3. Obstacle Information
 Next 4 indexes includes the relative position of the obstacle with respect to the snake's head. An obstacle is considered only when the distance is below a specified threshold. The obstacles includes the wall and the nearest body part. The vector is represented by '1' is obstacle and '0' otherwise in the order Up, Down, Left and Right.
 
 ## Actions
 Actions are represented by simple commands of Up, Down, Left and Right.
 
-## Reward
+## Rewards
 Reinforcement Learning works by maximizing the reward obtained in every iteration. For this the reward received by the agent is mapped as:
 1. +10 is food
 2. -5 is obstacle
 3. 1/distance otherwise where distance corresponds to the euclidean distance between the food and snake head. This step ensures possitive reward for any action leading towards the food
 
-## Reinforcement Learning Approach used
+## Reinforcement Learning Method
 Policy gradients represent a fundamental concept in reinforcement learning, serving as a powerful technique for training agents to navigate complex environments. Unlike traditional value-based methods that estimate the optimal action values, policy gradient methods directly learn the policy—the strategy an agent employs to make decisions. The core idea is to adjust the parameters of the policy in the direction that increases the likelihood of actions leading to higher rewards. Through the iterative process of interacting with the environment, collecting trajectories, and updating the policy based on the observed rewards, policy gradient methods have proven to efficient.
 
-The central policy is estimates using a neural network which takes the state tensor as an input and gives the probabilty of each action. The action with the highest probability is used to drive the agent.
+The central policy is estimated using a neural network which takes the state tensor as an input and gives the probabilty of each action. The action with the highest probability is used to drive the agent.
 
 ## Media
 ![video](https://github.com/saksham18kukreja/SnakeGame-using-RL/blob/main/snake_game/media/train_snake.gif)
