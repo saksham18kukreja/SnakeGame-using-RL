@@ -26,7 +26,7 @@ Actions are represented by simple commands of Up, Down, Left and Right.
 Reinforcement Learning works by maximizing the reward obtained in every iteration. For this the reward received by the agent is mapped as:
 1. +10 is food
 2. -5 is obstacle
-3. 1/distance otherwise where distance corresponds to the euclidean distance between the food and snake head. This step ensures possitive reward for any action leading towards the food
+3. $(1/\text{distance})$ otherwise where distance corresponds to the euclidean distance between the food and snake head. This step ensures possitive reward for any action leading towards the food
 
 ## Reinforcement Learning Method
 Policy gradients represent a fundamental concept in reinforcement learning, serving as a powerful technique for training agents to navigate complex environments. Unlike traditional value-based methods that estimate the optimal action values, policy gradient methods directly learn the policy—the strategy an agent employs to make decisions. The core idea is to adjust the parameters of the policy in the direction that increases the likelihood of actions leading to higher rewards. Through the iterative process of interacting with the environment, collecting trajectories, and updating the policy based on the observed rewards, policy gradient methods have proven to efficient.
@@ -34,10 +34,12 @@ Policy gradients represent a fundamental concept in reinforcement learning, serv
 The central policy is estimated using a neural network which takes the state tensor as an input and gives the probabilty of each action. The action with the highest probability is used to drive the agent.
 
 ## Media
+### Training
 ![video](https://github.com/saksham18kukreja/SnakeGame-using-RL/blob/main/snake_game/media/train_snake.gif)
 
 The training process initialises the agent with a random policy to take actions and helps in exploring the environment and collect rewards.
 
+### Trained
 ![video](https://github.com/saksham18kukreja/SnakeGame-using-RL/blob/main/snake_game/media/trained_snake.gif)
 
 After succesful training and hyperparameter tuning the agent learns to reach the goal and avoid obstacles.
