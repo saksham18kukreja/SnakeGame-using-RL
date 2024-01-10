@@ -9,7 +9,7 @@ The state for our system involves a vector of size 12 which contains the state r
 
 ## States
 The state for our system involves a vector of size 12 which contains the state representation in the form-
-### 1. Relative position of the food with respect to the snake head
+### 1. Relative Position of the Food
 The first 4 vectors define where the food is relative to the snake head based on the coordinates of the snake head and the food.
 The value in the first 4 indexes is '1' based on if it is up, down , left or right. '0' otherwise.
 
@@ -50,5 +50,4 @@ The model was trained on a smaller grid size to improve the likelihod of encount
 2. [Policy](https://github.com/saksham18kukreja/SnakeGame-using-RL/blob/main/snake_game/mind.py): The file contains the code for policy gradient(RL) to train the agent.
 3. [Test](https://github.com/saksham18kukreja/SnakeGame-using-RL/blob/main/snake_game/test.py): This is the code for testing and validating the trained policy on a larger grid size.
 
-## Parameters
-1. 
+
